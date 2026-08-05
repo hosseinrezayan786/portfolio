@@ -12,17 +12,15 @@ class PortfolioData {
 
   static const String aboutImage = 'assets/images/profile_image.jpg';
   // Contact Information
-  static const String email = 'hosseinrezayan786@gmail.com';
+  static const String email = 's.hosseinrezayan7@gmail.com';
   static const String phone = '+93 701758962';
 
   // Social Media Links
-  static const String instagramUrl =
-      'https://www.instagram.com/its_shaham__?igsh=MWFpcTZjNXZvbTJxMA%3D%3D';
+
   static const String githubUrl = 'https://github.com/hosseinrezayan786';
   static const String linkedinUrl =
       'https://www.linkedin.com/in/hossein-rezayan-a34018336/';
-  static const String whatsappUrl = 'https://wa.me/93701758962';
-  static const String leetcodeUrl = 'https://leetcode.com/u/Shaham_Ahammed/';
+  static const String whatsappUrl = "https://wa.me/93701758962";
   static const String cvUrl = '';
 
   // skills
@@ -126,18 +124,15 @@ class PortfolioData {
         'Order Tracking',
         'Driver Requests',
       ],
-      'imageUrl': AppImages.ravvan,
+      'imageUrl': AppImages.ravvanMain,
       'galleryImages': [
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531052/valentine_t3_1_wfxdoh.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531052/valentine_t1_1_ipwfie.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531052/valentine_t2_1_xvissi.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531052/valentine_t4_1_eojupj.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531052/holi_t1_1_zd9bks.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531053/eid_t1_c5gsox.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531053/birthday_t2_1_l5oatc.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531054/couples_t1_1_um2vzw.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531054/birthday_t1_1_elmzvm.jpg',
-        'https://res.cloudinary.com/dilbmyvfv/image/upload/v1777531055/anniversary_t1_1_bhrtcd.jpg',
+        AppImages.ravvanMain,
+        AppImages.ravvan1,
+        AppImages.ravvan2,
+        AppImages.ravvan3,
+        AppImages.ravvan4,
+        AppImages.ravvan5,
+        AppImages.ravvan6,
       ],
       'webUrl': 'https://my-bel0ved.web.app',
       'type': 'main',
@@ -295,7 +290,7 @@ class PortfolioData {
       'location': 'Iran',
       'period': '2023 - 2024',
       'description':
-          'Developed my first commercial Android application while working at Hero Behdasht, a manufacturer of stretch film products.\nDesigned and built a digital product catalog that allowed customers to explore products, learn about the company, and submit purchase requests directly to the business.\nThis experience introduced me to working with real client requirements, delivering software for a business, and publishing an application on Google Play.',
+          'Developed my first commercial Android application while working at Hyro Plast, a manufacturer of stretch film products.\nDesigned and built a digital product catalog that allowed customers to explore products, learn about the company, and submit purchase requests directly to the business.\nThis experience introduced me to working with real client requirements, delivering software for a business, and publishing an application on Google Play.',
       'technologies': ['Java', 'Android Studio', 'XML'],
       // 'website': 'https://salayan/',
     },

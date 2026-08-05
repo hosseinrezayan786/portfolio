@@ -50,24 +50,49 @@ class _PortfolioNavigationBarState extends State<PortfolioNavigationBar>
     super.dispose();
   }
 
-  void _toggleMenu() {
-    setState(() {
-      _isMenuOpen = !_isMenuOpen;
-      if (_isMenuOpen) {
-        _menuController.forward();
-      } else {
-        _menuController.reverse();
-      }
-    });
-  }
-
-  void _closeMenu() {
+  void _toggleMenu() async {
     if (_isMenuOpen) {
+      await _menuController.reverse();
+
       setState(() {
         _isMenuOpen = false;
-        _menuController.reverse();
       });
+    } else {
+      setState(() {
+        _isMenuOpen = true;
+      });
+
+      _menuController.forward();
     }
+  }
+  // void _toggleMenu() {
+  //   setState(() {
+  //     _isMenuOpen = !_isMenuOpen;
+  //     if (_isMenuOpen) {
+  //       _menuController.forward();
+  //     } else {
+  //       _menuController.reverse();
+  //     }
+  //   });
+  // }
+
+  // void _closeMenu() {
+  //   if (_isMenuOpen) {
+  //     setState(() {
+  //       _isMenuOpen = false;
+  //       _menuController.reverse();
+  //     });
+  //   }
+  // }
+
+  void _closeMenu() async {
+    if (!_isMenuOpen) return;
+
+    await _menuController.reverse();
+
+    setState(() {
+      _isMenuOpen = false;
+    });
   }
 
   @override
@@ -153,7 +178,8 @@ class _PortfolioNavigationBarState extends State<PortfolioNavigationBar>
         child: Stack(
           children: [
             // Shadow overlay when menu is open
-            if (_menuController.value > 0)
+            if (_isMenuOpen)
+              // if (_menuController.value > 0)
               Positioned(
                 top: 70, // Below nav bar
                 left: 0,

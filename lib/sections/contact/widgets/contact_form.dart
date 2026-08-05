@@ -58,10 +58,7 @@ class ContactForm extends StatelessWidget {
             ),
           )
         : const UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: AppColors.primaryLight,
-              width: 2,
-            ),
+            borderSide: BorderSide(color: AppColors.primaryLight, width: 2),
           );
 
     return SizedBox(
@@ -84,8 +81,9 @@ class ContactForm extends StatelessWidget {
                 focusedBorder: focusedBorder,
                 labelStyle: fieldTextStyle,
                 filled: isMobile,
-                fillColor:
-                    isMobile ? AppColors.background.withValues(alpha: 0.5) : null,
+                fillColor: isMobile
+                    ? AppColors.background.withValues(alpha: 0.5)
+                    : null,
               ),
               style: fieldTextStyle,
               validator: (value) {
@@ -109,8 +107,9 @@ class ContactForm extends StatelessWidget {
                 focusedBorder: focusedBorder,
                 labelStyle: fieldTextStyle,
                 filled: isMobile,
-                fillColor:
-                    isMobile ? AppColors.background.withValues(alpha: 0.5) : null,
+                fillColor: isMobile
+                    ? AppColors.background.withValues(alpha: 0.5)
+                    : null,
               ),
               style: fieldTextStyle,
               keyboardType: TextInputType.emailAddress,
@@ -141,8 +140,9 @@ class ContactForm extends StatelessWidget {
                 focusedBorder: focusedBorder,
                 labelStyle: fieldTextStyle,
                 filled: isMobile,
-                fillColor:
-                    isMobile ? AppColors.background.withValues(alpha: 0.5) : null,
+                fillColor: isMobile
+                    ? AppColors.background.withValues(alpha: 0.5)
+                    : null,
               ),
               style: fieldTextStyle,
               maxLines: isMobile ? 3 : 4,
@@ -162,19 +162,19 @@ class ContactForm extends StatelessWidget {
                       width: 20,
                       child: CircularProgressIndicator(
                         strokeWidth: 2,
-                        valueColor:
-                            AlwaysStoppedAnimation<Color>(Colors.white),
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                       ),
                     )
                   : Text(
                       'Send Message',
-                      style: (isMobile
-                              ? AppTextStyles.bodySmall(context)
-                              : AppTextStyles.bodyMedium(context))
-                          .copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style:
+                          (isMobile
+                                  ? AppTextStyles.bodySmall(context)
+                                  : AppTextStyles.bodyMedium(context))
+                              .copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
                     ),
             ),
           ],

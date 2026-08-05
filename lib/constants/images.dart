@@ -15,7 +15,13 @@ class AppImages {
   static const String maffad_6 = 'assets/images/maffad_bitcoin_6.jpg';
   static const String maffad_7 = 'assets/images/maffad_bitcoin_7.jpg';
 
-  static const String ravvan = 'assets/images/ravvan_delivery_main.jpg';
+  static const String ravvanMain = 'assets/images/ravvan_delivery_main.jpg';
+  static const String ravvan1 = 'assets/images/ravvan_delivery_1.jpg';
+  static const String ravvan2 = 'assets/images/ravvan_delivery_2.jpg';
+  static const String ravvan3 = 'assets/images/ravvan_delivery_3.jpg';
+  static const String ravvan4 = 'assets/images/ravvan_delivery_4.jpg';
+  static const String ravvan5 = 'assets/images/ravvan_delivery_5.jpg';
+  static const String ravvan6 = 'assets/images/ravvan_delivery_6.jpg';
 
   static const String foodDelivery = 'assets/images/food_delivery_main.jpg';
   static const String foodDelivery1 = 'assets/images/food_delivery_1.jpg';

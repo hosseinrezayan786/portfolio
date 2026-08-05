@@ -15,8 +15,12 @@ class NewPortfolioScreen extends StatefulWidget {
   State<NewPortfolioScreen> createState() => _NewPortfolioScreenState();
 }
 
-class _NewPortfolioScreenState extends State<NewPortfolioScreen> {
+class _NewPortfolioScreenState extends State<NewPortfolioScreen>
+    with TickerProviderStateMixin {
   final ScrollController _scrolController = ScrollController();
+
+  late AnimationController _menuController;
+  late CurvedAnimation _menuAnimation;
 
   final homeKey = GlobalKey();
   final aboutKey = GlobalKey();
@@ -90,6 +94,25 @@ class _NewPortfolioScreenState extends State<NewPortfolioScreen> {
         curve: Curves.easeInOut,
       );
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _menuController =
+        AnimationController(
+          vsync: this,
+          duration: const Duration(milliseconds: 300),
+        )..addListener(() {
+          setState(() {});
+        });
+
+    _menuAnimation = CurvedAnimation(
+      parent: _menuController,
+      curve: Curves.easeOutCubic,
+      reverseCurve: Curves.easeInCubic,
+    );
   }
 
   @override

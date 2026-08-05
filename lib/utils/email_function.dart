@@ -1,25 +1,52 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
-Future<bool> sendContactForm(String name, String email, String message) async {
-  try {
-    final response = await http.post(
-      Uri.parse('https://sendcontactmail-37fq2xx2sa-uc.a.run.app'),
-      headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({'name': name, 'email': email, 'message': message}),
-    );
-
-    log('Status: ${response.statusCode}');
-    log('Body: ${response.body}');
-
-    return response.statusCode == 200;
-  } catch (e, stack) {
-    log('Error: $e');
-    log('Stack: $stack');
-    return false;
+Future<void> sendContactForm(String name, String email, String message) async {
+  String? encodeQueryParameters(Map<String, String> params) {
+    return params.entries
+        .map(
+          (MapEntry<String, String> e) =>
+              '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}',
+        )
+        .join('&');
   }
+
+  // ···
+  final Uri emailLaunchUri = Uri(
+    scheme: 'mailto',
+    path: email,
+    query: encodeQueryParameters(<String, String>{
+      'subject': name,
+      'body': message,
+    }),
+  );
+
+  launchUrl(emailLaunchUri);
+
+  // }
 }
+
+// Future<bool> sendContactForm(String name, String email, String message) async {
+
+//   try {
+//     final response = await http.post(
+//       Uri.parse('https://sendcontactmail-37fq2xx2sa-uc.a.run.app'),
+//       headers: {'Content-Type': 'application/json'},
+//       body: jsonEncode({'name': name, 'email': email, 'message': message}),
+//     );
+
+//     log('Status: ${response.statusCode}');
+//     log('Body: ${response.body}');
+
+//     return response.statusCode == 200;
+//   } catch (e, stack) {
+//     log('Error: $e');
+//     log('Stack: $stack');
+//     return false;
+//   }
+// }
 // Future<bool> sendContactForm(String name, String email, String message) async {
 //   try {
 //     final url = Uri.parse('https://sendcontactmail-37fq2xx2sa-uc.a.run.app');

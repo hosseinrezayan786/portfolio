@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/colors.dart';
 import 'package:personal_portfolio/constants/images.dart';
@@ -7,6 +8,7 @@ import 'package:personal_portfolio/sections/home/widgets/animated_name_text.dart
 import 'package:personal_portfolio/sections/home/widgets/download_cv_button.dart';
 import 'package:personal_portfolio/sections/home/widgets/practicale_background.dart';
 import 'package:personal_portfolio/sections/home/widgets/simple_quote.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeSection extends StatefulWidget {
   const HomeSection({super.key});
@@ -41,6 +43,23 @@ class _HomeSectionState extends State<HomeSection>
     );
   }
 
+  Future<void> _downloadCV() async {
+    String cvUrl;
+
+    cvUrl = 'assets/documents/my_cv.pdf';
+
+    final Uri url = Uri.parse(cvUrl);
+    final bool opened = await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    );
+
+    if (!opened) {
+      throw Exception('Could not open CV');
+      print('could not open cv ########');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -69,7 +88,7 @@ class _HomeSectionState extends State<HomeSection>
                 left: isMobile ? null : 60,
                 right: isMobile ? 20 : null,
                 bottom: isMobile ? 20 : 40,
-                child: DownloadCVButton(onTap: () {}),
+                child: DownloadCVButton(onTap: _downloadCV),
               ),
             ],
           ),

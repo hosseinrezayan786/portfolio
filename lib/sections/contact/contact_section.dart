@@ -1,5 +1,8 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/model/contact_message.dart';
+import 'package:personal_portfolio/sections/contact/service/email_service.dart';
+import 'package:personal_portfolio/sections/contact/service/email_service_impl.dart';
 import 'package:personal_portfolio/utils/email_function.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -24,6 +27,8 @@ class _ContactSectionState extends State<ContactSection>
   final _emailController = TextEditingController();
   final _messageController = TextEditingController();
   bool _isSending = false;
+
+  EmailService emailService = EmailServiceImpl();
 
   late AnimationController _socialIconsController;
   bool _hasAnimated = false;
@@ -62,6 +67,29 @@ class _ContactSectionState extends State<ContactSection>
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
+  }
+
+  void sendEmail() async {
+    String? encodeQueryParameters(Map<String, String> params) {
+      return params.entries
+          .map(
+            (MapEntry<String, String> e) =>
+                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}',
+          )
+          .join('&');
+    }
+
+    // ···
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: 'hosseinrezayan786@gmail.com',
+      query: encodeQueryParameters(<String, String>{
+        'subject': 'hello hossein this email is from portfolio',
+        'body': 'hello body is here',
+      }),
+    );
+
+    (emailLaunchUri);
   }
 
   Future<void> _launchEmail(String email) async {
@@ -116,7 +144,9 @@ class _ContactSectionState extends State<ContactSection>
       final message = _messageController.text.trim();
       final email = _emailController.text.trim();
 
-      final result = await sendContactForm(name, email, message);
+      final result = await emailService.send(
+        ContactMessage(name: name, email: email, message: message),
+      );
       if (result) {
         _nameController.clear();
         _emailController.clear();

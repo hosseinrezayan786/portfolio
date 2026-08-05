@@ -798,7 +798,7 @@ class _MainProjectCardState extends State<_MainProjectCard>
               ? const BorderRadius.vertical(top: Radius.circular(28))
               : const BorderRadius.horizontal(left: Radius.circular(28)),
           child: Container(
-            height: widget.isMobile ? 200 : double.infinity,
+            height: widget.isMobile ? 220 : double.infinity,
             width: double.infinity,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -813,21 +813,8 @@ class _MainProjectCardState extends State<_MainProjectCard>
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Image.asset(widget.project.imageUrl, fit: BoxFit.fitWidth),
-                // Image.network(
-                //   widget.project.imageUrl,
-                //   fit: BoxFit.cover,
-                //   errorBuilder: (context, error, stackTrace) {
-                //     return Container(
-                //       color: AppColors.surfaceLight,
-                //       child: const Icon(
-                //         Icons.image,
-                //         size: 60,
-                //         color: AppColors.textTertiary,
-                //       ),
-                //     );
-                //   },
-                // ),
+                Image.asset(widget.project.imageUrl, fit: BoxFit.contain),
+
                 Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -895,7 +882,7 @@ class _MainProjectCardState extends State<_MainProjectCard>
 
   List<Widget> buildButtons() {
     final items = [
-      (widget.project.githubUrl, Icons.code, 'Code'),
+      // (widget.project.githubUrl, Icons.code, 'Code'),
       (widget.project.iosUrl, Icons.phone_iphone, 'iOS'),
       (widget.project.androidUrl, Icons.android, 'Android'),
       (widget.project.userAndroidUrl, Icons.android, 'User App'),
@@ -1659,72 +1646,7 @@ class _MiniProjectCardState extends State<_MiniProjectCard>
 
                                       return Transform.translate(
                                         offset: Offset(0, scrollOffset),
-                                        // child: Image.network(
-                                        //   widget.project.imageUrl,
-                                        //   fit: BoxFit.cover,
-                                        //   frameBuilder:
-                                        //       (
-                                        //         context,
-                                        //         child,
-                                        //         frame,
-                                        //         wasSynchronouslyLoaded,
-                                        //       ) {
-                                        //         // Track successful image load
-                                        //         if (frame != null &&
-                                        //             !_imageLoadedSuccessfully) {
-                                        //           WidgetsBinding.instance
-                                        //               .addPostFrameCallback((
-                                        //                 _,
-                                        //               ) {
-                                        //                 if (mounted) {
-                                        //                   setState(() {
-                                        //                     _imageLoadedSuccessfully =
-                                        //                         true;
-                                        //                   });
-                                        //                   // If already hovering, start the animation
-                                        //                   if (_isHovered) {
-                                        //                     _imageScrollController
-                                        //                         .repeat(
-                                        //                           reverse: true,
-                                        //                         );
-                                        //                   }
-                                        //                 }
-                                        //               });
-                                        //         }
-                                        //         return child;
-                                        //       },
-                                        //   errorBuilder: (context, error, stackTrace) {
-                                        //     // Mark image as failed to load
-                                        //     if (_imageLoadedSuccessfully) {
-                                        //       WidgetsBinding.instance
-                                        //           .addPostFrameCallback((_) {
-                                        //             if (mounted) {
-                                        //               setState(() {
-                                        //                 _imageLoadedSuccessfully =
-                                        //                     false;
-                                        //               });
-                                        //               // Stop animation if running
-                                        //               _imageScrollController
-                                        //                   .stop();
-                                        //               _imageScrollController
-                                        //                   .reset();
-                                        //             }
-                                        //           });
-                                        //     }
-                                        //     return Container(
-                                        //       color: AppColors.surfaceLight,
-                                        //       alignment: const Alignment(
-                                        //         0,
-                                        //         -0.5,
-                                        //       ), // Position more upwards
-                                        //       child: const Icon(
-                                        //         Icons.image,
-                                        //         size: 40,
-                                        //         color: AppColors.textTertiary,
-                                        //       ),
-                                        //     );
-                                        //   },
-                                        // ),
+
                                         child: Image.asset(
                                           widget.project.imageUrl,
                                           fit: BoxFit.fitWidth,
@@ -2012,21 +1934,21 @@ class _MiniProjectCardState extends State<_MiniProjectCard>
                                               builder: (context) {
                                                 final buttons = <Widget>[];
 
-                                                if (widget.project.githubUrl !=
-                                                    null) {
-                                                  buttons.add(
-                                                    _ActionButton(
-                                                      icon: Icons.code,
-                                                      label: 'Code',
-                                                      onTap: () => _launchUrl(
-                                                        widget
-                                                            .project
-                                                            .githubUrl,
-                                                      ),
-                                                      isSmall: true,
-                                                    ),
-                                                  );
-                                                }
+                                                // if (widget.project.githubUrl !=
+                                                //     null) {
+                                                //   buttons.add(
+                                                //     _ActionButton(
+                                                //       icon: Icons.code,
+                                                //       label: 'Code',
+                                                //       onTap: () => _launchUrl(
+                                                //         widget
+                                                //             .project
+                                                //             .githubUrl,
+                                                //       ),
+                                                //       isSmall: true,
+                                                //     ),
+                                                //   );
+                                                // }
                                                 if (widget.project.iosUrl !=
                                                     null) {
                                                   buttons.add(
@@ -2614,14 +2536,15 @@ class _ProjectGalleryPopupState extends State<_ProjectGalleryPopup>
                   children: [
                     // Scrollable Gallery Grid
                     Positioned.fill(
-                      child: Padding(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 5),
                         padding: const EdgeInsets.fromLTRB(12, 70, 12, 12),
                         child: ClipRRect(
                           borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(20),
+                            top: Radius.circular(10),
                             bottom: Radius.circular(20),
                           ),
-                          child: _buildGrid(images),
+                          child: _buildGrid(images, isMobile),
                         ),
                       ),
                     ),
@@ -2699,7 +2622,7 @@ class _ProjectGalleryPopupState extends State<_ProjectGalleryPopup>
     );
   }
 
-  Widget _buildGrid(List<String> images) {
+  Widget _buildGrid(List<String> images, bool isMobile) {
     // Pinterest-style masonry layout with varying aspect ratios
     return MasonryGridView.count(
       crossAxisCount: _crossAxisCount,
@@ -2711,7 +2634,7 @@ class _ProjectGalleryPopupState extends State<_ProjectGalleryPopup>
         final aspectRatio = _aspectRatios[index];
 
         return Container(
-          height: 150,
+          height: isMobile ? 220 : 320,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
@@ -2723,7 +2646,7 @@ class _ProjectGalleryPopupState extends State<_ProjectGalleryPopup>
             borderRadius: BorderRadius.circular(8),
             child: AspectRatio(
               aspectRatio: aspectRatio,
-              child: Image.asset(images[index], fit: BoxFit.cover),
+              child: Image.asset(images[index], fit: BoxFit.contain),
               // child: Image.network(
               //   images[index],
               //   fit: BoxFit.cover,
