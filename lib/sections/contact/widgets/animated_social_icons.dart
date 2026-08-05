@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+dir build\web
 import '../../../constants/portfolio_data.dart';
 import 'social_icon_button.dart';
 

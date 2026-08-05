@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/model/contact_message.dart';
 import 'package:personal_portfolio/sections/contact/service/email_service.dart';
 import 'package:personal_portfolio/sections/contact/service/email_service_impl.dart';
-import 'package:personal_portfolio/utils/email_function.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import '../../constants/colors.dart';
