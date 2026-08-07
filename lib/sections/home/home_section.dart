@@ -45,7 +45,7 @@ class _HomeSectionState extends State<HomeSection>
   Future<void> _downloadCV() async {
     String cvUrl;
 
-    cvUrl = 'assets/documents/my_cv.pdf';
+    cvUrl = 'assets/assets/documents/my_cv.pdf';
 
     final Uri url = Uri.parse(cvUrl);
     final bool opened = await launchUrl(
