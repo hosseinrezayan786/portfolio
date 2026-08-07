@@ -53,7 +53,6 @@ class _HomeSectionState extends State<HomeSection>
 
     if (!opened) {
       throw Exception('Could not open CV');
-      print('could not open cv ########');
     }
   }
 
