@@ -65,25 +65,6 @@ class _PortfolioNavigationBarState extends State<PortfolioNavigationBar>
       _menuController.forward();
     }
   }
-  // void _toggleMenu() {
-  //   setState(() {
-  //     _isMenuOpen = !_isMenuOpen;
-  //     if (_isMenuOpen) {
-  //       _menuController.forward();
-  //     } else {
-  //       _menuController.reverse();
-  //     }
-  //   });
-  // }
-
-  // void _closeMenu() {
-  //   if (_isMenuOpen) {
-  //     setState(() {
-  //       _isMenuOpen = false;
-  //       _menuController.reverse();
-  //     });
-  //   }
-  // }
 
   void _closeMenu() async {
     if (!_isMenuOpen) return;

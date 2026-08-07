@@ -16,12 +16,11 @@ class PortfolioData {
   static const String phone = '+93 701758962';
 
   // Social Media Links
-
   static const String githubUrl = 'https://github.com/hosseinrezayan786';
   static const String linkedinUrl =
       'https://www.linkedin.com/in/hossein-rezayan-a34018336/';
   static const String whatsappUrl = "https://wa.me/93701758962";
-  static const String cvUrl = '';
+  static const String cvUrl = 'assets/documents/my_cv.pdf';
 
   // skills
   static const List<Map<String, dynamic>> skills = [
@@ -41,7 +40,6 @@ class PortfolioData {
     {'name': 'Git', 'iconKey': 'git', 'accentColor': 0xFFF1502F},
     {'name': 'GitHub', 'iconKey': 'github', 'accentColor': 0xFF188717},
     {'name': 'Figma', 'iconKey': 'figma', 'accentColor': 0xFFF24E1E},
-
     {'name': 'Postman', 'iconKey': 'postman', 'accentColor': 0xFFFF6C37},
     {'name': 'VS Code', 'iconKey': 'vscode', 'accentColor': 0xFF007ACC},
     {'name': 'Cursor', 'iconKey': 'cursor', 'accentColor': 0xFF59E1E},
@@ -78,10 +76,10 @@ class PortfolioData {
         AppImages.maffad_6,
         AppImages.maffad_7,
       ],
-      'githubUrl': 'https://github.com/Shaham-Ahammed/trim-spot-user',
+      'githubUrl': '',
 
-      'userAndroidUrl': 'https://www.amazon.com/dp/B0D571DFTK/ref=apps_sf_sta',
-      'adminAndroidUrl': 'https://www.amazon.com/dp/B0CY5D6XFL/ref=apps_sf_sta',
+      'userAndroidUrl': '',
+      'adminAndroidUrl': '',
       'type': 'main',
     },
 
@@ -104,10 +102,9 @@ class PortfolioData {
         AppImages.helma3,
         AppImages.helma4,
       ],
-      'webUrl': 'https://www.kawader.gov.qa/',
-      'iosUrl': 'https://apps.apple.com/qa/app/kawader-qatar/id6755183682',
-      'androidUrl':
-          'https://play.google.com/store/apps/details?id=com.cgb.kawader',
+      'webUrl': '',
+      'iosUrl': '',
+      'androidUrl': '',
 
       'type': 'main',
     },
@@ -134,7 +131,7 @@ class PortfolioData {
         AppImages.ravvan5,
         AppImages.ravvan6,
       ],
-      'webUrl': 'https://my-bel0ved.web.app',
+      'webUrl': '',
       'type': 'main',
     },
 
@@ -160,8 +157,8 @@ class PortfolioData {
         AppImages.hyroPlast8,
         AppImages.hyroPlast9,
       ],
-      'githubUrl': 'https://github.com/Shaham-Ahammed/flutter-music-player',
-      'androidUrl': 'https://www.amazon.com/dp/B0CPYR6D8W/ref=apps_sf_sta',
+      'githubUrl': '',
+      'androidUrl': '',
       'type': 'main',
     },
 
@@ -179,8 +176,8 @@ class PortfolioData {
         AppImages.foodDelivery4,
         AppImages.foodDelivery5,
       ],
-      'githubUrl': 'https://github.com/Shaham-Ahammed/flutter-music-player',
-      'androidUrl': 'https://www.amazon.com/dp/B0CPYR6D8W/ref=apps_sf_sta',
+      'githubUrl': '',
+      'androidUrl': '',
       'type': 'main',
     },
 
@@ -204,7 +201,7 @@ class PortfolioData {
       ],
 
       'imageUrl': AppImages.musicPlayer,
-      'githubUrl': 'https://github.com/Shaham-Ahammed/neflix_clone',
+      'githubUrl': '',
       'type': 'mini',
     },
     {
@@ -226,8 +223,7 @@ class PortfolioData {
         'Message Highlighting',
       ],
       'imageUrl': AppImages.wordSpelling,
-      'githubUrl':
-          'https://github.com/Shaham-Ahammed/LET-HIM-COOK---Recipe-application',
+      'githubUrl': '',
       'type': 'mini',
     },
     {
@@ -243,8 +239,7 @@ class PortfolioData {
         'Responsive Layout',
       ],
       'imageUrl': AppImages.shopy,
-      'githubUrl':
-          'https://github.com/Shaham-Ahammed/student-management-app-getX-sqflite',
+      'githubUrl': '',
       'type': 'mini',
     },
     {
@@ -259,7 +254,7 @@ class PortfolioData {
         'Custom Daily Tasks',
       ],
       'imageUrl': AppImages.habitTracker,
-      'githubUrl': 'https://github.com/Shaham-Ahammed/weather-app-bloc-and-api',
+      'githubUrl': '',
       'type': 'mini',
     },
 
@@ -276,8 +271,7 @@ class PortfolioData {
         'Minimal UI',
       ],
       'imageUrl': AppImages.pomaTimer,
-      'githubUrl':
-          'https://github.com/Shaham-Ahammed/tic-tac-toe/blob/main/lib/main.dart',
+      'githubUrl': '',
       'type': 'mini',
     },
   ];
@@ -292,7 +286,6 @@ class PortfolioData {
       'description':
           'Developed my first commercial Android application while working at Hyro Plast, a manufacturer of stretch film products.\nDesigned and built a digital product catalog that allowed customers to explore products, learn about the company, and submit purchase requests directly to the business.\nThis experience introduced me to working with real client requirements, delivering software for a business, and publishing an application on Google Play.',
       'technologies': ['Java', 'Android Studio', 'XML'],
-      // 'website': 'https://salayan/',
     },
     {
       'title': 'Flutter Developer',
