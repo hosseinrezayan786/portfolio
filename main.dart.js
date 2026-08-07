@@ -29205,12 +29205,12 @@ case 2:return B.Ap
 case 1:return B.Ao
 case 3:return B.WP
 case 4:return B.Aq}},
-p8(a,b){var s=0,r=A.O(t.y),q,p
-var $async$p8=A.P(function(c,d){if(c===1)return A.L(d,r)
+p8(a,b,c){var s=0,r=A.O(t.y),q,p
+var $async$p8=A.P(function(d,e){if(d===1)return A.L(e,r)
 for(;;)switch(s){case 0:if(b===B.M2||b===B.M3)p=!(a.geG()==="https"||a.geG()==="http")
 else p=!1
 if(p)throw A.i(A.f6(a,"url","To use an in-app web view, you must provide an http(s) URL."))
-q=$.aEJ().w3(a.k(0),new A.Oi(A.b_M(b),new A.O4(!0,!0,B.lv),null))
+q=$.aEJ().w3(a.k(0),new A.Oi(A.b_M(b),new A.O4(!0,!0,B.lv),c))
 s=1
 break
 case 1:return A.M(q,r)}})
@@ -90131,7 +90131,7 @@ return A.S(A.ts(q),$async$ui)
 case 4:s=c?2:3
 break
 case 2:s=5
-return A.S(A.p8(q,B.i5),$async$ui)
+return A.S(A.p8(q,B.l1,null),$async$ui)
 case 5:case 3:return A.M(null,r)}})
 return A.N($async$ui,r)},
 od(a){return this.afD(a)},
@@ -90147,7 +90147,7 @@ return A.S(A.ts(A.ej(p,0,null)),$async$od)
 case 8:s=c?5:7
 break
 case 5:s=9
-return A.S(A.p8(A.ej(p,0,null),B.l1),$async$od)
+return A.S(A.p8(A.ej(p,0,null),B.i5,null),$async$od)
 case 9:s=6
 break
 case 7:n=q.c
@@ -90160,7 +90160,7 @@ return A.S(A.ts(o),$async$od)
 case 13:s=c?10:12
 break
 case 10:s=14
-return A.S(A.p8(o,B.l1),$async$od)
+return A.S(A.p8(o,B.i5,null),$async$od)
 case 14:s=11
 break
 case 12:n=q.c
@@ -90176,7 +90176,7 @@ return A.S(A.ts(q),$async$uh)
 case 4:s=c?2:3
 break
 case 2:s=5
-return A.S(A.p8(q,B.l1),$async$uh)
+return A.S(A.p8(q,B.i5,null),$async$uh)
 case 5:case 3:return A.M(null,r)}})
 return A.N($async$uh,r)},
 yX(){var s=0,r=A.O(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f,e,d,c,b
@@ -90736,7 +90736,7 @@ return A.S(A.ts(p),$async$ug)
 case 6:s=b?4:5
 break
 case 4:s=7
-return A.S(A.p8(p,B.i5),$async$ug)
+return A.S(A.p8(p,B.l1,null),$async$ug)
 case 7:case 5:case 3:return A.M(null,r)}})
 return A.N($async$ug,r)},
 L(a){return this.a.e?this.a81(a):this.a7Q(a)},
@@ -90914,7 +90914,7 @@ p.r=s},
 y_(){var s=0,r=A.O(t.H)
 var $async$y_=A.P(function(a,b){if(a===1)return A.L(b,r)
 for(;;)switch(s){case 0:s=2
-return A.S(A.p8(A.ej("assets/assets/documents/my_cv.pdf",0,null),B.i5),$async$y_)
+return A.S(A.p8(A.ej("cv/my_cv.pdf",0,null),B.i5,"_blank"),$async$y_)
 case 2:if(!b)throw A.i(A.dr("Could not open CV"))
 return A.M(null,r)}})
 return A.N($async$y_,r)},
@@ -91824,7 +91824,7 @@ return A.S(A.ts(q),$async$lB)
 case 6:s=c?4:5
 break
 case 4:s=7
-return A.S(A.p8(q,B.i5),$async$lB)
+return A.S(A.p8(q,B.l1,null),$async$lB)
 case 7:case 5:case 3:return A.M(null,r)}})
 return A.N($async$lB,r)},
 L(a){var s,r,q=this,p=null,o=q.a.d,n=o?new A.atw(q):p,m=o?q.gah0():p,l=o?q.gah2():p
@@ -93500,7 +93500,8 @@ p=s}return this.w2(a,!0,!0,b.b.c,q===B.Aq,p,p,b.d)}}
 A.amr.prototype={
 avP(a,b){var s,r=A.aJc(a),q=r==null?null:r.geG()
 if(B.Yp.A(0,q))return!1
-s=this.b&&B.AX.A(0,q)?"_top":""
+if(b==null)s=this.b&&B.AX.A(0,q)?"_top":""
+else s=b
 this.a.open(a,s,"noopener,noreferrer")
 return!0},
 Wm(a){var s=$.aNI(),r=A.aJc(a)
@@ -100956,10 +100957,10 @@ B.i4=new A.B0(1,"domText")
 B.fc=new A.B0(2,"sizedSpan")
 B.M0=new A.ab1(!1,255)
 B.M1=new A.ab2(255)
-B.l1=new A.uU(0,"platformDefault")
+B.i5=new A.uU(0,"platformDefault")
 B.M2=new A.uU(1,"inAppWebView")
 B.M3=new A.uU(2,"inAppBrowserView")
-B.i5=new A.uU(3,"externalApplication")
+B.l1=new A.uU(3,"externalApplication")
 B.pJ=new A.B6(0,"opportunity")
 B.l2=new A.B6(2,"mandatory")
 B.pK=new A.B6(3,"endOfText")
