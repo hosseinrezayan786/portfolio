@@ -45,13 +45,11 @@ class _HomeSectionState extends State<HomeSection>
   Future<void> _downloadCV() async {
     String cvUrl;
 
-    cvUrl = 'assets/assets/documents/my_cv.pdf';
+    cvUrl = 'cv/my_cv.pdf';
 
     final Uri url = Uri.parse(cvUrl);
-    final bool opened = await launchUrl(
-      url,
-      mode: LaunchMode.externalApplication,
-    );
+
+    final bool opened = await launchUrl(url, webOnlyWindowName: '_blank');
 
     if (!opened) {
       throw Exception('Could not open CV');
