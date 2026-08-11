@@ -20,7 +20,7 @@ class PortfolioData {
   static const String linkedinUrl =
       'https://www.linkedin.com/in/hossein-rezayan-a34018336/';
   static const String whatsappUrl = "https://wa.me/93701758962";
-  static const String cvUrl = 'assets/documents/my_cv.pdf';
+  static const String cvUrl = 'assets/documents/my_cv2.pdf';
 
   // skills
   static const List<Map<String, dynamic>> skills = [
