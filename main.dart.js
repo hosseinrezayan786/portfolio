@@ -90316,7 +90316,7 @@ A.yn.prototype={
 L(a){var s=A.b([],t.H7),r=t.N,q=t.z
 s.push(A.aq(["icon",B.B_,"color",B.HO,"url","https://github.com/hosseinrezayan786"],r,q))
 s.push(A.aq(["icon",B.KF,"color",B.HJ,"url","https://www.linkedin.com/in/hossein-rezayan-a34018336/"],r,q))
-s.push(A.aq(["icon",B.YA,"color",B.I2,"url","https://wa.me/93701758962"],r,q))
+s.push(A.aq(["icon",B.YA,"color",B.I2,"url","https://wa.me/93778416810"],r,q))
 return A.hD(A.aDm(this.e,A.uX(s.length,new A.a30(this,s),!0,t.l7),16,16),null,null)}}
 A.a30.prototype={
 $1(a){var s=a*0.15,r=this.a,q=A.bk(new A.dA(B.d.b_(s,0,1),B.d.b_(s+0.4,0,1),B.hE),r.c,null),p=this.b
@@ -90332,12 +90332,12 @@ $0(){return this.a.d.$1(A.bt(this.b[this.c].i(0,"url")))},
 $S:0}
 A.Mb.prototype={
 L(a){var s=this,r=null,q=t.p
-return A.cz(A.b([A.e0(A.cG(A.b([new A.nm(B.ps,"s.hosseinrezayan7@gmail.com","Email",new A.a4W(s),!1,r),B.bE,new A.nm(B.px,"+93 701758962","Phone",new A.a4X(s),!1,r),B.iY,new A.rV(s.y,new A.yn(s.x,s.z,B.cH,r),B.a5R)],q),B.a7,B.dr,B.C),1),B.Bp,A.e0(A.hD(A.aFN(s.e,s.c,!1,s.r,s.f,s.d,s.w),r,r),2),B.Bp,B.Kf],q),B.B,B.v,B.C)}}
+return A.cz(A.b([A.e0(A.cG(A.b([new A.nm(B.ps,"s.hosseinrezayan7@gmail.com","Email",new A.a4W(s),!1,r),B.bE,new A.nm(B.px,"+93 778416810","Phone",new A.a4X(s),!1,r),B.iY,new A.rV(s.y,new A.yn(s.x,s.z,B.cH,r),B.a5R)],q),B.a7,B.dr,B.C),1),B.Bp,A.e0(A.hD(A.aFN(s.e,s.c,!1,s.r,s.f,s.d,s.w),r,r),2),B.Bp,B.Kf],q),B.B,B.v,B.C)}}
 A.a4W.prototype={
 $0(){return this.a.Q.$1("s.hosseinrezayan7@gmail.com")},
 $S:0}
 A.a4X.prototype={
-$0(){return this.a.as.$1("+93 701758962")},
+$0(){return this.a.as.$1("+93 778416810")},
 $S:0}
 A.Mc.prototype={
 L(a){var s,r,q=this,p=null,o=A.b5(a,p,t.w).w.a.a<768?1/0:500,n=q.x,m=n?A.cc(p,p,B.aw,p,p,p,p,p,p,p,p,14,p,p,p,p,1.5,!0,p,p,p,p,p,p,p,p):A.n5(a),l=n?14:20,k=n?B.oM:p,j=A.bW(10),i=n?new A.hY(4,j,new A.b8(B.r.ad(0.55),1,B.x,-1)):new A.i5(B.h7,new A.b8(B.r.ad(0.3),1,B.x,-1)),h=n?new A.hY(4,j,B.np):B.a5H,g=A.aD4(B.dI,q.d,A.aan(p,i,p,k,p,p,p,p,!0,i,p,p,p,p,p,n?B.b7.ad(0.5):p,n,p,p,p,p,h,p,p,p,p,p,p,p,p,p,"Your name",p,p,p,p,p,n,p,m,"Name",!0,!0,!1,p,p,p,p,p,p,p,p,p,p,p,p,p,p),p,1,m,new A.a4Y()),f=A.aD4(B.dI,q.e,A.aan(p,i,p,k,p,p,p,p,!0,i,p,p,p,p,p,n?B.b7.ad(0.5):p,n,p,p,p,p,h,p,p,p,p,p,p,p,p,p,"your.email@example.com",p,p,p,p,p,n,p,m,"Email",!0,!0,!1,p,p,p,p,p,p,p,p,p,p,p,p,p,p),B.BX,1,m,new A.a4Z()),e=A.aan(p,i,p,k,p,p,p,p,!0,i,p,p,p,p,p,n?B.b7.ad(0.5):p,n,p,p,p,p,h,p,p,p,p,p,p,p,p,p,"Your message...",p,p,p,p,p,n,p,m,"Message",!0,!0,!1,p,p,p,p,p,p,p,p,p,p,p,p,p,p),d=n?3:4
@@ -90368,12 +90368,12 @@ return null},
 $S:105}
 A.Md.prototype={
 L(a){var s=this,r=null
-return A.cG(A.b([new A.c1(B.JM,A.aFN(s.e,s.c,!0,s.r,s.f,s.d,s.w),r),B.iZ,new A.nm(B.ps,"s.hosseinrezayan7@gmail.com","Email",new A.a51(s),!0,r),B.bE,new A.nm(B.px,"+93 701758962","Phone",new A.a52(s),!0,r),B.iY,new A.rV(s.y,new A.yn(s.x,s.z,B.cH,r),B.a5Q)],t.p),B.a7,B.v,B.C)}}
+return A.cG(A.b([new A.c1(B.JM,A.aFN(s.e,s.c,!0,s.r,s.f,s.d,s.w),r),B.iZ,new A.nm(B.ps,"s.hosseinrezayan7@gmail.com","Email",new A.a51(s),!0,r),B.bE,new A.nm(B.px,"+93 778416810","Phone",new A.a52(s),!0,r),B.iY,new A.rV(s.y,new A.yn(s.x,s.z,B.cH,r),B.a5Q)],t.p),B.a7,B.v,B.C)}}
 A.a51.prototype={
 $0(){return this.a.Q.$1("s.hosseinrezayan7@gmail.com")},
 $S:0}
 A.a52.prototype={
-$0(){return this.a.as.$1("+93 701758962")},
+$0(){return this.a.as.$1("+93 778416810")},
 $S:0}
 A.nm.prototype={
 ab(){return new A.VG(null,null)}}
@@ -90922,7 +90922,7 @@ p.r=s},
 y_(){var s=0,r=A.O(t.H)
 var $async$y_=A.P(function(a,b){if(a===1)return A.L(b,r)
 for(;;)switch(s){case 0:s=2
-return A.S(A.p8(A.ej("cv/my_cv2.pdf",0,null),B.i5,"_blank"),$async$y_)
+return A.S(A.p8(A.ej("cv/my_cv1.pdf",0,null),B.i5,"_blank"),$async$y_)
 case 2:if(!b)throw A.i(A.dr("Could not open CV"))
 return A.M(null,r)}})
 return A.N($async$y_,r)},
