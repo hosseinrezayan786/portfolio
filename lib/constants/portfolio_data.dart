@@ -13,14 +13,14 @@ class PortfolioData {
   static const String aboutImage = 'assets/images/profile_image.jpg';
   // Contact Information
   static const String email = 's.hosseinrezayan7@gmail.com';
-  static const String phone = '+93 701758962';
+  static const String phone = '+93 778416810';
 
   // Social Media Links
   static const String githubUrl = 'https://github.com/hosseinrezayan786';
   static const String linkedinUrl =
       'https://www.linkedin.com/in/hossein-rezayan-a34018336/';
-  static const String whatsappUrl = "https://wa.me/93701758962";
-  static const String cvUrl = 'assets/documents/my_cv2.pdf';
+  static const String whatsappUrl = "https://wa.me/93778416810";
+  static const String cvUrl = 'assets/documents/my_cv1.pdf';
 
   // skills
   static const List<Map<String, dynamic>> skills = [
