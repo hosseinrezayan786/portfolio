@@ -45,7 +45,7 @@ class _HomeSectionState extends State<HomeSection>
   Future<void> _downloadCV() async {
     String cvUrl;
 
-    cvUrl = 'cv/my_cv1.pdf';
+    cvUrl = 'cv/hossein_cv.pdf';
 
     final Uri url = Uri.parse(cvUrl);
 
