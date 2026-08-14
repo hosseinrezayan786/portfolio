@@ -90922,7 +90922,7 @@ p.r=s},
 y_(){var s=0,r=A.O(t.H)
 var $async$y_=A.P(function(a,b){if(a===1)return A.L(b,r)
 for(;;)switch(s){case 0:s=2
-return A.S(A.p8(A.ej("cv/my_cv1.pdf",0,null),B.i5,"_blank"),$async$y_)
+return A.S(A.p8(A.ej("cv/hossein_cv.pdf",0,null),B.i5,"_blank"),$async$y_)
 case 2:if(!b)throw A.i(A.dr("Could not open CV"))
 return A.M(null,r)}})
 return A.N($async$y_,r)},
